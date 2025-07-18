@@ -1,0 +1,139 @@
+<!-- Tabs navs -->
+<ul class="nav-tabs mb-5 d-flex justify-content-start explore-tab" id="ex1" role="tablist" >
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link active"
+                id="ex1-tab-1"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-1"
+                role="tab"
+                aria-controls="ex1-tabs-1"
+                aria-selected="true"
+        >Art</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-2"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-2"
+                role="tab"
+                aria-controls="ex1-tabs-2"
+                aria-selected="false"
+        >Photos</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-3"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-3"
+                role="tab"
+                aria-controls="ex1-tabs-3"
+                aria-selected="false"
+        >Comics</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-4"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-4"
+                role="tab"
+                aria-controls="ex1-tabs-4"
+                aria-selected="false"
+        >Amulet</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-5"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-5"
+                role="tab"
+                aria-controls="ex1-tabs-5"
+                aria-selected="false"
+        >Sports</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-6"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-6"
+                role="tab"
+                aria-controls="ex1-tabs-6"
+                aria-selected="false"
+        >Collectibles</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-7"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-7"
+                role="tab"
+                aria-controls="ex1-tabs-7"
+                aria-selected="false"
+        >Games</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-8"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-8"
+                role="tab"
+                aria-controls="ex1-tabs-8"
+                aria-selected="false"
+        >Caligraphy</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-3"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-3"
+                role="tab"
+                aria-controls="ex1-tabs-3"
+                aria-selected="false"
+        >Caligraphy</a
+        >
+    </li>
+</ul>
+<!-- Tabs navs -->
+
+<!--<div class="d-flex mb-5">-->
+<!--    <div class="">Showing <strong>50</strong> of 4,000 results</div>-->
+<!--    <div class=""></div>-->
+<!--</div>-->
+
+<!-- Tabs content -->
+<div class="tab-content" id="ex1-content">
+    <div
+            class="tab-pane fade show active"
+            id="ex1-tabs-1"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-1"
+    >
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-4">
+            <% for(var i=0; i<50; i++){ %>
+                <div class="col">
+                    <% include ../../component/card/card-basic3.html %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+        Tab 2 content
+    </div>
+</div>
+<!-- Tabs content -->

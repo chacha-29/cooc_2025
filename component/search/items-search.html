@@ -1,0 +1,388 @@
+<!-- S:테스크탑에서만 보임-->
+<div class="d-lg-block d-none">
+    <div class="row mb-3">
+        <div class="col-xl-4 col-lg-4 col-md-12 mb-2">
+            <div class="input-group rounded form-control rounded" style="height:48px;">
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="search" class="border-0" placeholder="Search" aria-label="Search" aria-describedby="search-addon" style="width:80%;"/>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-2 col-md-6 mb-2">
+            <div class="form-outline">
+                <select class="select form-control-lg w-100" style="height:48px;">
+                    <option value="1">single items</option>
+                    <option value="2">All items</option>
+                    <option value="3">Bundle</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-6 mb-2">
+            <div class="form-outline">
+                <select class="select form-control-lg w-100" style="height:48px;">
+                    <option value="1">Price:Low to High</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+            <div class="d-flex">
+                <div class="d-flex flex-wrap shadow-3 rounded-5 p-2 me-3" style="height:48px;">
+                    <button type="button" class="btn btn-link btn-sm px-1" data-mdb-ripple-color="dark">
+                        <img src="/assets/img/icon-gridview-large-select.png" alt="">
+                    </button>
+                    <button type="button" class="btn btn-link btn-sm px-1" data-mdb-ripple-color="dark">
+                        <img src="/assets/img/icon-gridview-small-default.png" alt="">
+                    </button>
+                </div>
+                <div class="d-flex shadow-3 rounded-5 py-2 px-3 mb-3" style="height:48px;">
+                    <a href="javascript:doDisplay();" class="text-body mt-1">
+                        <div class="d-flex">
+                            <div class="badge bg-primary rounded-8">2</div>
+                            <div class="fw-bold ms-2">Filters</div>
+                            <div class="material-symbols-rounded ms-1 text-darken">expand_more</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- S:filter -->
+        <div class="filter" id="myDIV" style="display:none;">
+            <div class="row p-4 card">
+                <div class="row py-3 border-bottom">
+                    <div class="col-md-2"><p class="h6 mb-0">Status</p></div>
+                    <div class="col-md-10">
+                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                        <label class="btn btn-outline-primary me-2 mb-2" for="btn-check">Buy Now</label>
+                        <input type="checkbox" class="btn-check" id="btn-check2" autocomplete="off" />
+                        <label class="btn btn-outline-primary me-2 mb-2" for="btn-check2">On Auction</label>
+                        <input type="checkbox" class="btn-check" id="btn-check3" autocomplete="off" />
+                        <label class="btn btn-outline-primary me-2 mb-2" for="btn-check3">New</label>
+                        <input type="checkbox" class="btn-check " id="btn-check4" autocomplete="off" />
+                        <label class="btn btn-outline-primary me-2 mb-2" for="btn-check4">Has Offers</label>
+                        <input type="checkbox" class="btn-check" id="btn-check5" autocomplete="off" />
+                        <label class="btn btn-outline-primary me-2 mb-2" for="btn-check5">Buy with Card</label>
+                    </div>
+                </div>
+                <div class="row py-3 border-bottom">
+                    <div class="col-md-2"><p class="h6 mb-0">Price</p></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="select form-control-lg w-100" style="height:48px;">
+                                    <option value="1">United States Dollar (USD)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex flex-row">
+                                    <div class="form-outline">
+                                        <input type="text" id="form12" class="form-control rounded border" style="width:110px;height:48px;" />
+                                        <label class="form-label" for="form12">Min</label>
+                                    </div>
+                                    <span class="fw-bold px-3 d-flex align-items-center">to</span>
+                                    <div class="form-outline">
+                                        <input type="text" id="form12" class="form-control rounded border"  style="width:110px;height:48px;"/>
+                                        <label class="form-label" for="form12">Min</label>
+                                    </div>
+                                    <button type="button" class="btn btn-light mx-2 shadow-0 border" disabled>Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3 border-bottom">
+                    <div class="col-md-2"><p class="h6 mb-0">Chains</p></div>
+                    <div class="col-md-10">
+                        <div class="d-flex flex-row">
+                            <div class="form-check me-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault"><img src="/assets/img/icon-symverse.png" alt="SYM"> Symverse</label>
+                            </div>
+                            <div class="form-check me-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked/>
+                                <label class="form-check-label" for="flexCheckDefault"><img src="/assets/img/icon-ETH-24.png" alt="ETH"> Ethereum</label>
+                            </div>
+                            <div class="form-check me-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault"><img src="/assets/img/icon-polygon.png" alt="POLYGON"> Polygon</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3 border-bottom">
+                    <div class="col-md-2"><p class="h6 mb-0">Sale Crypto</p></div>
+                    <div class="col-md-10">
+                        <div class="d-flex flex-row">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">ETH</label>
+                            </div>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">WETH</label>
+                            </div>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">APE</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3 px-0">
+                    <div class="col-md-6 px-0">
+                        <button type="button" class="btn btn-link" data-mdb-ripple-color="dark">Clear All</button>
+                    </div>
+                    <div class="col-md-6 px-0 text-end">
+                        <button type="button" class="btn btn-outline-dark">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E:filter -->
+    </div>
+    <!-- items refresh -->
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <a href="#" role="button" class="text-darken ">
+                <span class="material-symbols-outlined">refresh</span>
+            </a>
+            <strong class="text-darken">1000</strong> items
+        </div>
+    </div>
+    <!-- Filter chips -->
+    <div class="d-flex">
+        <div class="mx-2">
+            <div class="chip btn btn-outline-color btn-sm">
+                <span class="fs-6">Buy Now</span>
+                <i class="close material-icons">close</i>
+            </div>
+        </div>
+        <div class="mx-2">
+            <div class="chip btn btn-outline-color btn-sm">
+                <span class="fs-6">Ethereum</span>
+                <i class="close material-icons">close</i>
+            </div>
+        </div>
+        <button type="button" class="btn btn-link" data-mdb-ripple-color="dark">Clear All</button>
+    </div>
+</div>
+<!-- E:테스크탑에서만 보임-->
+
+<!-- S:모바일에서만 보임-->
+<div class="d-lg-none d-block">
+    <div class="row">
+        <div class="col-sm-12 mb-2">
+            <div class="input-group rounded form-control rounded" style="height:48px;">
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="search" class="border-0" placeholder="Search" aria-label="Search" aria-describedby="search-addon" style="width:80%;"/>
+            </div>
+        </div>
+        <div class="col-6 mb-2">
+            <button type="button" class="btn btn-outline-dark btn-block mb-2 d-flex justify-content-center" data-mdb-toggle="modal" data-mdb-target="#filterModal">
+                <span class="material-symbols-outlined me-2">filter_alt</span> Filters
+            </button>
+        </div>
+        <div class="col-6 mb-2">
+            <button type="button" class="btn btn-outline-dark btn-block mb-2 d-flex justify-content-center" data-mdb-toggle="modal" data-mdb-target="#sortModal">
+                <span class="material-symbols-outlined me-2">sort</span> Sort
+            </button>
+        </div>
+    </div>
+
+    <!--S:mobile Filter-->
+    <!-- Full screen modal -->
+    <div class="modal fade bottom" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-darken" id="exampleModalLabel">Filters</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button px-2" type="button" data-mdb-toggle="collapse"
+                                        data-mdb-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Status</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="accordion-body px-2 py-4">
+                                    <input type="checkbox" class="btn-check" id="btn-check6" autocomplete="off" />
+                                    <label class="btn btn-outline-primary me-2 mb-2" for="btn-check6" style="height:48px;">Buy Now</label>
+                                    <input type="checkbox" class="btn-check" id="btn-check7" autocomplete="off" />
+                                    <label class="btn btn-outline-primary me-2 mb-2" for="btn-check7" style="height:48px;">On Auction</label>
+                                    <input type="checkbox" class="btn-check" id="btn-check8" autocomplete="off" />
+                                    <label class="btn btn-outline-primary me-2 mb-2" for="btn-check8" style="height:48px;">New</label>
+                                    <input type="checkbox" class="btn-check" id="btn-check9" autocomplete="off" />
+                                    <label class="btn btn-outline-primary me-2 mb-2" for="btn-check9" style="height:48px;">Has Offers</label>
+                                    <input type="checkbox" class="btn-check" id="btn-check10" autocomplete="off" />
+                                    <label class="btn btn-outline-primary me-2 mb-2" for="btn-check10" style="height:48px;">Buy with Card</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed px-2" type="button" data-mdb-toggle="collapse"
+                                        data-mdb-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                    <strong>Price</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                <div class="accordion-body px-2 py-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <select class="select form-control-lg w-100 mb-2" style="height:48px;">
+                                                <option value="1">United States Dollar (USD)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="d-flex flex-row">
+                                                <div class="form-outline">
+                                                    <input type="text" id="form12" class="form-control rounded border" style="width:110px;height:48px;" />
+                                                    <label class="form-label" for="form12">Min</label>
+                                                </div>
+                                                <span class="fw-bold px-3 d-flex align-items-center">to</span>
+                                                <div class="form-outline">
+                                                    <input type="text" id="form12" class="form-control rounded border"  style="width:110px;height:48px;"/>
+                                                    <label class="form-label" for="form12">Min</label>
+                                                </div>
+                                                <button type="button" class="btn btn-light mx-2 shadow-0 border" disabled>Apply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed px-2" type="button" data-mdb-toggle="collapse"
+                                        data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                    <strong>Chains</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                <div class="accordion-body px-2 py-4">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex" style="min-height:56px;">
+                                            <div class="p-2 w-100">
+                                                <label class="form-check-label float-left" for="flexCheckDefault"><img src="/assets/img/icon-symverse.png" alt="SYM"> Symverse</label>
+                                            </div>
+                                            <div class="p-2 flex-shrink-1">
+                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                                            </div>
+                                        </div>
+                                        <div class="d-flex" style="min-height:56px;">
+                                            <div class="p-2 w-100">
+                                                <label class="form-check-label" for="flexCheckDefault"><img src="/assets/img/icon-ETH-24.png" alt="ETH"> Ethereum</label>
+                                            </div>
+                                            <div class="p-2 flex-shrink-1">
+                                                <input class="form-check-input float-right" type="checkbox" value="" id="flexCheckDefault" checked/>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex" style="min-height:56px;">
+                                            <div class="p-2 w-100">
+                                                <label class="form-check-label" for="flexCheckDefault"><img src="/assets/img/icon-polygon.png" alt="POLYGON"> Polygon</label>
+                                            </div>
+                                            <div class="p-2 flex-shrink-1">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed px-2" type="button" data-mdb-toggle="collapse"
+                                        data-mdb-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseFour">
+                                    <strong>Sale Crypto</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                                <div class="accordion-body px-2 py-4">
+                                    <div class="d-flex" style="min-height:56px;">
+                                        <div class="p-2 w-100">
+                                            <label class="form-check-label" for="flexCheckDefault" style="height:48px;">ETH</label>
+                                        </div>
+                                        <div class="p-2 flex-shrink-1">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        </div>
+                                    </div>
+                                    <div class="d-flex" style="min-height:56px;">
+                                        <div class="p-2 w-100">
+                                            <label class="form-check-label" for="flexCheckDefault" style="height:48px;">WETH</label>
+                                        </div>
+                                        <div class="p-2 flex-shrink-1">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        </div>
+                                    </div>
+                                    <div class="d-flex" style="min-height:56px;">
+                                        <div class="p-2 w-100">
+                                            <label class="form-check-label" for="flexCheckDefault" style="height:48px;">APE</label>
+                                        </div>
+                                        <div class="p-2 flex-shrink-1">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex w-100">
+                        <div class="flex-fill px-1">
+                            <button type="button" class="btn btn-outline-primary btn-block">Clear all</button>
+                        </div>
+                        <div class="flex-fill px-1">
+                            <button type="button" class="btn btn-primary btn-block" data-mdb-dismiss="modal">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--E:mobile Filter-->
+
+    <!--S:mobile Sort-->
+    <!-- Full screen modal -->
+    <div class="modal fade bottom" id="sortModal" tabindex="-1" aria-labelledby="sortModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-darken" id="exampleModalLabel">Sort by</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex" style="min-height:56px;">
+                        <div class="p-2 w-100">
+                            <label class="form-check-label" for="flexCheckDefault" style="height:48px;">Recently Listed</label>
+                        </div>
+                        <div class="p-2 flex-shrink-1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex w-100">
+                        <div class="flex-fill px-1">
+                            <button type="button" class="btn btn-primary btn-block" data-mdb-dismiss="modal">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--E:mobile Sort-->
+
+</div>
+
+
+<!-- E:모바일에서만 보임-->

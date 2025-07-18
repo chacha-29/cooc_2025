@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../../include/head.html %>
+</head>
+<body>
+
+<!-- Start your project here-->
+<!-- S:header -->
+<header>
+    <% include ../../include/header.html %>
+</header>
+<!-- E:header -->
+
+<!-- S:main -->
+<main class="contents-area">
+    <div class="container mb-8">
+        <!-- S:서브 컨텐츠 영역-->
+            <!-- 컬렉션 상단 정보-->
+            <% include ../../include/collection-head.html %>
+            <!-- Tab -->
+            <div class="mb-2 mb-lg-5">
+                <% include ../../component/tabs/tabs-basic2.html %>
+            </div>
+            <!-- Search -->
+            <div class="mb-2 mb-lg-5">
+                <% include ../../component/search/items-search.html %>
+            </div>
+
+            <!-- List -->
+            <!-- s: 데스크탑보임-->
+            <div class="d-none d-lg-block">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-4 ">
+                    <% for(var i=0; i<50; i++){ %>
+                        <div class="col">
+                            <% include ../../component/card/card-basic4.html %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <!-- E: 데스크탑보임-->
+            <!-- s: 모바일 보임-->
+            <div class="d-lg-none d-block">
+                <!-- 아래로 스크롤시 필터버튼 보이기 -->
+                <div class="fixed-bottom mx-5" id="bottom-btn">
+                    <a class="btn btn-light btn-rounded btn-block d-flex justify-content-center" data-mdb-toggle="modal" data-mdb-target="#filterModal">
+                        <span class="material-symbols-outlined">filter_alt</span> Filters <strong class="ms-2">2</strong>
+                    </a>
+                </div>
+                <div class="row row-cols-2 g-4 ">
+                    <% for(var i=0; i<50; i++){ %>
+                        <div class="col">
+                            <% include ../../component/card/card-basic4.html %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <!-- E: 모바일 보임-->
+        <!-- E:서브 컨텐츠 영역-->
+    </div>
+</main>
+<!-- E:main -->
+
+<!-- footer-->
+<footer>
+    <% include ../../include/footer.html %>
+</footer>
+<!-- footer ends-->
+<!-- End your project here-->
+
+<!-- MDB -->
+<script type="text/javascript" src="/js/mdb.min.js"></script>
+<!-- add Script -->
+<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

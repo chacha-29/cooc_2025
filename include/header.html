@@ -1,0 +1,330 @@
+<!-- S:1200이상 ,1200이하-992 에서만 보임-->
+<div class="d-lg-block d-none">
+    <div class="header fixed-top">
+        <nav class="navbar navbar-expand-xl navbar-light bg-white py-0">
+        <div class="container-fluid p-lg-4 p-3 d-flex">
+            <!-- S:Logo-->
+            <a class="navbar-brand py-0" href="/">
+                <img src="/assets/img/logo.png" class="d-lg-none" height="40" alt="COOC"/>
+                <img src="/assets/img/logo.png" class="d-none d-lg-block" height="50" alt="COOC"/>
+            </a>
+
+            <!-- S:Search-->
+            <div class="d-none d-xl-block px-4 mx-4 w-100">
+                <form class="input-group">
+                    <span class="input-group-text border-0" id="search-addon">
+                      <span class="material-symbols-outlined">search</span>
+                    </span>
+                    <input type="search" class="form-control rounded border-0 fs-6"
+                           placeholder="Search items, collections., and accounts" aria-label="Search"
+                           aria-describedby="search-addon"/>
+                </form>
+            </div>
+            <div class="d-xl-none d-lg-block px-4 mx-4 w-50">
+                <form class="input-group">
+                    <span class="input-group-text border-0" id="search-addon">
+                      <span class="material-symbols-outlined">search</span>
+                    </span>
+                    <input type="search" class="form-control rounded border-0 fs-6"
+                           placeholder="Search items, collections., and accounts" aria-label="Search"
+                           aria-describedby="search-addon"/>
+                </form>
+            </div>
+            <!-- E:Search-->
+
+            <!-- S:Right elements -->
+            <div class="navbar-nav d-xl-none ">
+                <div class="d-flex align-items-center ">
+                    <!-- S:Account-->
+                    <div class="dropdown">
+                        <a
+                                class="text-reset mx-3 dropdown-toggle hidden-arrow"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                        >
+                            <span class="material-icons material-symbols-outlined md-40">account_circle</span>
+                        </a>
+                        <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="navbarDropdownMenuLink"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Favorites</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Watchlist</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> My Collections</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- S:Wallet -->
+                    <a class="text-reset mx-3" href="#" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                        <span class="material-icons material-symbols-outlined md-40">account_balance_wallet</span>
+                    </a>
+                </div>
+            </div>
+            <!-- E:Right elements -->
+
+            <!-- S:햄버거메뉴-->
+            <div class="d-flex flex-row-reverse">
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="material-symbols-outlined md-40">menu</span>
+                </button>
+            </div>
+            <!-- E:햄버거메뉴-->
+
+            <!-- S:Nav-->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+                <!-- S: GNB-->
+                <ul class="navbar-nav me-5 mb-0 mb-lg-0 text-black">
+                    <li class="nav-item mb-0 px-3 py-3 h5">
+                        <a class="nav-link" href="/explore">Explore</a>
+                    </li>
+                    <li class="nav-item mb-0 px-3 py-3 h5">
+                        <a class="nav-link" href="#">Stats</a>
+                    </li>
+                    <li class="nav-item mb-0 px-3 py-3 h5">
+                        <a class="nav-link ">Create</a>
+                    </li>
+                    <li class="nav-item mb-0 px-3 py-3 h5">
+                        <a class="nav-link ">Help</a>
+                    </li>
+                </ul>
+                <!-- S: 1200이하-992 -->
+                <div class="navbar-nav d-xl-none d-lg-block mt-3">
+                    <!-- S:언어선택-->
+                    <div class="d-flex flex-row mb-3">
+                        <a class="dropdown-item" href="#">
+                            <i class="flag flag-us"></i>en
+                            <i class="fa fa-check text-success ms-2"></i>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="flag flag-south-korea"></i>ko
+                        </a>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg btn-block">Connect Wallet</a>
+                </div>
+                <!-- S: 1200이상 -->
+                <div class="navbar-nav d-lg-none d-xl-block">
+                    <!-- S:Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- S:Account-->
+                        <div class="dropdown">
+                            <a
+                                    class="text-reset mx-3 dropdown-toggle hidden-arrow"
+                                    href="#"
+                                    id="navbarDropdownMenuLink"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"
+                            >
+                                <span class="material-icons material-symbols-outlined md-40">account_circle</span>
+                            </a>
+                            <ul
+                                    class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="navbarDropdownMenuLink"
+                            >
+                                <li>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Favorites</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"> Watchlist</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"> My Collections</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"> Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- S:Wallet -->
+                        <a class="text-reset mx-3" href="#" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                            <span class="material-icons material-symbols-outlined md-40">account_balance_wallet</span>
+                        </a>
+                        <!-- S:언어선택-->
+                        <ul class="navbar-nav ms-3">
+                            <!-- Icon dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <!--                                <i class="flag flag-us "></i>-->
+                                    <span class="material-icons material-symbols-outlined md-40 text-body">language</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="flag flag-us"></i>en
+                                            <i class="fa fa-check text-success ms-2"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="flag flag-south-korea"></i>ko
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- E:Right elements -->
+                </div>
+            </div>
+            <!-- E:Nav-->
+        </div>
+    </nav>
+    </div>
+</div>
+<!-- E:1200이상 ,1200이하-992 에서만 보임-->
+
+<!-- S: 992이하 에서만 보임-->
+<div class="d-block d-lg-none">
+    <div class="header fixed-top">
+        <nav class="navbar navbar-light bg-white py-0">
+            <div class="container p-3 d-flex">
+                <!-- S:Logo-->
+                <div class="me-auto">
+                    <a class="navbar-brand py-0" href="/">
+                        <img src="/assets/img/logo.png" class="d-lg-none" height="40" alt="COOC"/>
+                        <img src="/assets/img/logo.png" class="d-none d-lg-block" height="50" alt="COOC"/>
+                    </a>
+                </div>
+
+                <!-- S:Search-->
+                <div class="d-flex">
+                    <a href="#" onClick="javascript:dooDisplay();">
+                        <span class="input-group-text border-0" id="search-addon">
+                          <span class="material-symbols-outlined">search</span>
+                        </span>
+                    </a>
+                </div>
+                <!-- E:Search-->
+                <!-- S:Search detail-->
+                <div class="" id="searchDIV" style="display:none;position:absolute;top:0;left:0;width:100%;background:#fff;padding:12px;">
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <button type="button" class="btn shadow-0 p-2" onClick="javascript:dooDisplay();">
+                                <span class="material-symbols-outlined" style="font-size:24px !important;">chevron_left</span>
+                            </button>
+                        </div>
+                        <div class="w-100 d-flex align-items-center">
+                            <form class="input-group" style="width:95%;">
+                                <input type="search" class="form-control rounded border-0"
+                                       placeholder="Search items, collections., and accounts" aria-label="Search"
+                                       aria-describedby="search-addon"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- E:Search detail-->
+
+                <!-- S:햄버거메뉴-->
+                <div class="d-flex">
+                    <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-mdb-toggle="collapse"
+                            data-mdb-target="#navbarTogglerDemo02"
+                            aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+                <!-- E:햄버거메뉴-->
+
+                <!-- S:Nav-->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+                    <!-- S: GNB-->
+                    <ul class="navbar-nav me-5 mb-0 mb-lg-0 text-black">
+                        <li class="nav-item mb-0 px-3 py-3 h5">
+                            <a class="nav-link" href="/explore">Explore</a>
+                        </li>
+                        <li class="nav-item mb-0 px-3 py-3 h5">
+                            <a class="nav-link" href="#">Stats</a>
+                        </li>
+                        <li class="nav-item mb-0 px-3 py-3 h5">
+                            <a class="nav-link ">Create</a>
+                        </li>
+                        <li class="nav-item mb-0 px-3 py-3 h5">
+                            <a class="nav-link ">Help</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-nav mt-3">
+                        <!-- S:언어선택-->
+                        <div class="d-flex flex-row mb-3">
+                            <a class="dropdown-item" href="#">
+                                <i class="flag flag-us"></i>en
+                                <i class="fa fa-check text-success ms-2"></i>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="flag flag-south-korea"></i>ko
+                            </a>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-lg btn-block" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Connect Wallet</a>
+                    </div>
+
+                </div>
+                <!-- E:Nav-->
+            </div>
+        </nav>
+    </div>
+
+</div>
+
+
+
+<!-- Wallet signin -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- QR 로그인-->
+                <form class="mb-2">
+                    <div class="border border-dark border-2 rounded-7 text-center py-4">
+                        <h3 class="mb-2 fw-bold text-darken">Connect Wallet</h3>
+                        <img src="/assets/img/qr-test.png" width="50%">
+                        <p class="py-3 mb-0 small text-darken"><span class="text-danger fw-bold fs-5">60</span> 초 뒤에 QR이 없어져요! </p>
+                        <div class="small text-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 18 18">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg> <span class="small">QR 을 누르면 지갑이 열립니다.</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 mb-3 d-flex align-items-center justify-content-center">
+                        <button class="btn btn-primary shadow-0 ">Download the Wallet</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-mdb-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
