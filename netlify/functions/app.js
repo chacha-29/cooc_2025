@@ -41,7 +41,26 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  
+  // Netlify Functions에서는 views 디렉토리에 접근할 수 없으므로 JSON 응답 반환
+  if (req.headers.accept && req.headers.accept.includes('application/json')) {
+    res.json({
+      message: err.message,
+      error: req.app.get('env') === 'development' ? err : {}
+    });
+  } else {
+    // 간단한 HTML 응답 반환
+    res.send(`
+      <html>
+        <head><title>Error</title></head>
+        <body>
+          <h1>${err.message}</h1>
+          <h2>${err.status || 500}</h2>
+          ${req.app.get('env') === 'development' ? `<pre>${err.stack}</pre>` : ''}
+        </body>
+      </html>
+    `);
+  }
 });
 
 module.exports.handler = serverless(app); 
