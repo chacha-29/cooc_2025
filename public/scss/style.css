@@ -1,0 +1,51 @@
+.contents-area {
+  margin-top: 100px;
+  margin-bottom:80px;
+}
+
+@media (min-width: 992px) {
+  .contents-area {
+    margin-top: 184px;
+    margin-bottom:60px;
+  }
+}
+.collection-info {
+  margin-top: 0px;
+}
+@media (min-width: 700px) and (max-width: 786px) {
+  .collection-info{
+    margin-top: -60px;
+  }
+}
+@media (min-width: 787px) {
+  .collection-info{
+    margin-top: -80px;
+  }
+}
+
+/*tab*/
+.explore-tab {
+  list-style: none;
+}
+.explore-tab li{display: inline;}
+@media (max-width: 1199px) {
+  .explore-tab {
+    overflow-x: auto;
+    padding-left:0;
+  }
+}
+
+/*하단 필터버튼*/
+#bottom-btn {
+  position: fixed;
+  bottom: -80px;
+  display: block;
+  transition: bottom 0.5s;
+}
+#bottom-btn a {
+  float: left;
+  display: block;
+  box-shadow:0px 1px 10px rgba(0,0,0,0.3);
+}
+
+

@@ -1,0 +1,41 @@
+<!-- Tabs navs -->
+<ul class="nav nav-tabs mb-5 d-flex justify-content-center border-bottom" >
+    <% if (title == "Collections - items" ) { %>
+        <li class="nav-item" role="presentation">
+        <a
+                class="nav-link active"
+                href="collection-items"
+                role="tab"
+                aria-selected="true"
+        >Items</a>
+        </li>
+        <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                href="collection-activity"
+                role="tab"
+                aria-selected="false">Activity</a>
+        </li>
+    <% } else {%>
+        <li class="nav-item" role="presentation">
+            <a
+                    class="nav-link"
+                    href="collection-items"
+                    role="tab"
+                    aria-selected="true"
+            >Items</a
+            >
+        </li>
+        <li class="nav-item" role="presentation">
+            <a
+                    class="nav-link active"
+                    href="collection-activity"
+                    role="tab"
+                    aria-selected="false"
+            >Activity</a
+            >
+        </li>
+    <% } %>
+</ul>
+<!-- Tabs navs -->
+

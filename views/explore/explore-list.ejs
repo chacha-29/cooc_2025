@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../../include/head.html %>
+</head>
+<body>
+
+<!-- Start your project here-->
+<!-- S:header -->
+<header>
+    <% include ../../include/header.html %>
+</header>
+<!-- E:header -->
+
+<!-- S:main -->
+<main class="contents-area">
+    <div class="container mb-8">
+        <!-- S:서브 컨텐츠 영역-->
+            <h2 class="text-darken fw-bold mb-5 text-center"><%= title %></h2>
+            <div class="mb-5">
+                <% include ../../component/tabs/tabs-basic.html %>
+            </div>
+        <!-- E:서브 컨텐츠 영역-->
+    </div>
+</main>
+<!-- E:main -->
+
+<!-- footer-->
+<footer>
+    <% include ../../include/footer.html %>
+</footer>
+<!-- footer ends-->
+<!-- End your project here-->
+
+<!-- MDB -->
+<script type="text/javascript" src="/js/mdb.min.js"></script>
+<!-- add Script -->
+<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>
