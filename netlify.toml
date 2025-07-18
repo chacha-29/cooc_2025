@@ -4,7 +4,7 @@
   publish = "public"
 
 [functions]
-  included_files = ["views/**/*"]
+  included_files = ["views/**/*", "include/**/*", "component/**/*"]
 
 [dev]
   command = "npm run dev:netlify"
